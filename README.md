@@ -84,11 +84,8 @@ func main() {
         }
     }()
     // Get value from cell by given worksheet name and axis.
-    cell, err := f.GetCellValue("Sheet1", "B2")
-    if err != nil {
-        fmt.Println(err)
-        return
-    }
+    cell := f.GetCellValue("Sheet1", "B2")
+ 
     fmt.Println(cell)
     // Get all the rows in the Sheet1.
     rows, err := f.GetRows("Sheet1")
